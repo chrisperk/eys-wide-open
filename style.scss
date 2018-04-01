@@ -45,7 +45,7 @@ html {
         top: 80px;
         right: 0;
         background-color: rgba(0, 0, 0, 0.8);
-        color: white;
+        color: black;
         // padding: 50px 20px;
         margin: 0 -15px;
         transition: all 0.5s;        
@@ -82,6 +82,7 @@ html {
             font-size: 2em;
             color: $base-white;
             padding: 5px 5px;
+            text-decoration: none;            
 
             &:visited {
                 color: $base-white;
@@ -322,5 +323,45 @@ footer {
                         width: 40%;
                     }
                 }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .navbar {
+                padding: 0 30px;
+
+                .hamburger-button {
+                    display: none;
+                }
+
+                .nav-links {
+                    display: none;
+                    flex-direction: row;
+                    position: initial;
+                    max-height: 100px;
+                    background-color: transparent;
+                    width: 40%;
+                    justify-content: space-around;
+
+                    &.tucked {
+                        display: flex;
+                        
+                        .nav-link {
+                            color: $base-blue;                            
+                        }
+                    }
+
+                    .nav-link {
+                        font-size: 1.4em;                        
+                        
+                        &:visited {
+                            // color: $base-blue;                            
+                        }
+                    }
+                }
+            }
+
+            #about, #contribute {
+                padding: 40px 100px;
             }
         }

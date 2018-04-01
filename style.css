@@ -33,7 +33,7 @@ html {
     top: 80px;
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: black;
     margin: 0 -15px;
     transition: all 0.5s;
     display: flex;
@@ -57,7 +57,8 @@ html {
     .navbar .nav-links .nav-link {
       font-size: 2em;
       color: #FEFEFA;
-      padding: 5px 5px; }
+      padding: 5px 5px;
+      text-decoration: none; }
       .navbar .nav-links .nav-link:visited {
         color: #FEFEFA; }
   .navbar .brand {
@@ -224,5 +225,27 @@ footer {
 
   #contact form input, #contact form textarea {
     width: 40%; } }
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0 30px; }
+    .navbar .hamburger-button {
+      display: none; }
+    .navbar .nav-links {
+      display: none;
+      flex-direction: row;
+      position: initial;
+      max-height: 100px;
+      background-color: transparent;
+      width: 40%;
+      justify-content: space-around; }
+      .navbar .nav-links.tucked {
+        display: flex; }
+        .navbar .nav-links.tucked .nav-link {
+          color: #1E63A9; }
+      .navbar .nav-links .nav-link {
+        font-size: 1.4em; }
+
+  #about, #contribute {
+    padding: 40px 100px; } }
 
 /*# sourceMappingURL=style.css.map */
