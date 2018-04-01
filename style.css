@@ -1,0 +1,215 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: #1E63A9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  z-index: 5; }
+  .navbar.tucked {
+    box-shadow: 0 10px 10px -10px grey;
+    height: 50px;
+    background-color: #FEFEFA; }
+  .navbar .nav-links {
+    max-height: 0;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin: 0 -15px;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 0 0 0 20px;
+    list-style: none; }
+    .navbar .nav-links.show {
+      max-height: 400px;
+      padding: 50px 35px; }
+      .navbar .nav-links.show.tucked {
+        top: 50px;
+        background-color: rgba(254, 254, 250, 0.8); }
+        .navbar .nav-links.show.tucked .nav-link {
+          color: #1E63A9; }
+          .navbar .nav-links.show.tucked .nav-link:visited {
+            color: #1E63A9; }
+    .navbar .nav-links li {
+      padding: 10px 0; }
+    .navbar .nav-links .nav-link {
+      font-size: 2em;
+      color: #FEFEFA;
+      padding: 5px 5px; }
+      .navbar .nav-links .nav-link:visited {
+        color: #FEFEFA; }
+  .navbar .brand {
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.3s; }
+    .navbar .brand.show {
+      opacity: 1; }
+  .navbar .hamburger-button {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.2s; }
+    .navbar .hamburger-button:hover {
+      transform: scale(1.2);
+      color: #154879; }
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FEFEFA;
+  text-shadow: 2px 2px #1E63A9;
+  text-align: center;
+  z-index: 2; }
+  .hero h1 {
+    font-size: 3em; }
+  .hero:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url("./assets/img/harry-quan-486229-unsplash.jpg");
+    background-size: cover;
+    z-index: -1; }
+  .hero .tag-line {
+    width: 80%;
+    font-size: 1.4em; }
+  .hero .cta-buttons {
+    width: 80%;
+    display: flex;
+    justify-content: space-around; }
+    .hero .cta-buttons a {
+      color: #1E63A9;
+      background-color: #FEFEFA;
+      text-shadow: initial;
+      padding: 10px 20px;
+      border: 1px solid #1E63A9;
+      border-radius: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s; }
+      .hero .cta-buttons a.primary {
+        color: #FEFEFA;
+        background-color: #1E63A9;
+        border: 1px solid #FEFEFA; }
+        .hero .cta-buttons a.primary:hover {
+          background-color: #154879; }
+      .hero .cta-buttons a:hover {
+        transform: scale(1.1);
+        background-color: #FFF5EE; }
+
+#about {
+  padding: 40px 25px;
+  text-align: center;
+  background-color: #FEFEFA;
+  color: #1E63A9; }
+  #about h2, #about p {
+    text-align: left; }
+  #about p {
+    padding-bottom: 20px; }
+  #about a {
+    color: #1E63A9;
+    background-color: #FEFEFA;
+    text-shadow: initial;
+    padding: 10px 20px;
+    border: 1px solid #1E63A9;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s; }
+    #about a:hover {
+      background-color: #FFF5EE; }
+
+#contribute {
+  background-color: #1E63A9;
+  color: #FEFEFA;
+  padding: 40px 25px; }
+  #contribute p {
+    padding-bottom: 20px; }
+  #contribute .page-links {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center; }
+  #contribute a {
+    color: #1E63A9;
+    background-color: #FEFEFA;
+    text-shadow: initial;
+    padding: 10px 20px;
+    border: 1px solid #1E63A9;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s; }
+    #contribute a.primary {
+      color: #FEFEFA;
+      background-color: #1E63A9;
+      border: 1px solid #FEFEFA; }
+      #contribute a.primary:hover {
+        background-color: #154879; }
+    #contribute a:hover {
+      background-color: #FFF5EE; }
+
+#contact {
+  padding: 40px 25px;
+  color: #1E63A9; }
+  #contact form {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #contact form input, #contact form textarea {
+      display: block;
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      border: 1px solid #52AEF4;
+      color: #1E63A9;
+      background-color: #FEFEFA; }
+    #contact form .submit-button {
+      background-color: #FEFEFA;
+      color: #1E63A9;
+      border-color: #1E63A9;
+      cursor: pointer;
+      border-radius: 20px; }
+      #contact form .submit-button:hover {
+        background-color: #FFF5EE; }
+
+footer {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1E63A9;
+  color: #FEFEFA; }
+
+/*# sourceMappingURL=style.css.map */
