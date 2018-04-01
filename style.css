@@ -179,7 +179,8 @@ html {
 
 #contact {
   padding: 40px 25px;
-  color: #1E63A9; }
+  color: #1E63A9;
+  background-color: #FEFEFA; }
   #contact form {
     width: 100%;
     height: 300px;
