@@ -213,4 +213,16 @@ footer {
   background-color: #1E63A9;
   color: #FEFEFA; }
 
+@media (min-width: 768px) {
+  .hero .tag-line {
+    width: 40%; }
+  .hero .cta-buttons {
+    width: 40%; }
+
+  #contribute .page-links {
+    width: 40%; }
+
+  #contact form input, #contact form textarea {
+    width: 40%; } }
+
 /*# sourceMappingURL=style.css.map */
